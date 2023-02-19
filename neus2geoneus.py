@@ -32,7 +32,7 @@ def neus2geoneus(path):
     pc_path = os.path.join(path, "pc.ply")
     cameras_path = os.path.join(path, "cameras.npz")
     pair_path = os.path.join(path, "pair.txt")
-    num_images = len(os.listdir(os.path.join(path, "images")))
+    num_images = len(os.listdir(os.path.join(path, "image")))
     
     normalized_pc = rescale_pc(pc_path, cameras_path)
     normalized_pc_ply = trimesh.Trimesh(vertices=normalized_pc)
